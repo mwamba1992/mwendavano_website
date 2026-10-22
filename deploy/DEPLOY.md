@@ -6,20 +6,13 @@ business., store. and wafanyakazi.mwendavano.com. DNS for `mwendavano.com` and `
 Until this is installed, https://mwendavano.com falls through to the dukanimauzo.com server block (wrong certificate,
 Dukani content), because nginx has no 443 server for this name.
 
-## First install (on the server, as root)
+## Install (on the server, as root)
 
 ```bash
-# 1. Code
 git clone https://github.com/mwamba1992/mwendavano_website.git /var/www/mwendavano-website
-#   (private repo? use: git clone git@github.com:mwamba1992/mwendavano_website.git ... with the server's deploy key)
-
-# 2. nginx site (port 80 only; certbot adds HTTPS in step 3)
+certbot certonly --nginx -d mwendavano.com -d www.mwendavano.com     # certificate first; renews itself
 cp /var/www/mwendavano-website/deploy/mwendavano.com.conf /etc/nginx/sites-available/mwendavano.com
-ln -s /etc/nginx/sites-available/mwendavano.com /etc/nginx/sites-enabled/
-nginx -t && systemctl reload nginx
-
-# 3. Certificate + HTTPS + http→https redirect (renews itself)
-certbot --nginx -d mwendavano.com -d www.mwendavano.com --redirect
+ln -sf /etc/nginx/sites-available/mwendavano.com /etc/nginx/sites-enabled/mwendavano.com
 nginx -t && systemctl reload nginx
 ```
 
@@ -27,6 +20,8 @@ nginx -t && systemctl reload nginx
 
 ```bash
 cd /var/www/mwendavano-website && git pull
+# only when deploy/mwendavano.com.conf changed:
+cp deploy/mwendavano.com.conf /etc/nginx/sites-available/mwendavano.com && nginx -t && systemctl reload nginx
 ```
 (index.html is served with no-cache, so visitors get the new page straight away.)
 
