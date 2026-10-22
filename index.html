@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mwendavano Holdings · Software and IT consultancy in Tanzania</title>
+<meta name="description" content="Mwendavano Holdings builds custom web and mobile software for Tanzanian businesses, offers IT consultancy, and makes the Dukani apps: Dukani Mauzo, Dukani Soko and Dukani Wafanyakazi.">
+<link rel="canonical" href="https://mwendavano.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F2F5F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1514" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mwendavano Holdings">
+<meta property="og:title" content="Mwendavano Holdings · Software and IT consultancy in Tanzania">
+<meta property="og:description" content="Custom web and mobile systems, IT consultancy, and the Dukani apps. Built in Dar es Salaam.">
+<meta property="og:url" content="https://mwendavano.com/">
+<meta property="og:image" content="https://mwendavano.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mwendavano Holdings Limited","url":"https://mwendavano.com/","logo":"https://mwendavano.com/favicon.svg","telephone":"+255789947608","address":{"@type":"PostalAddress","addressLocality":"Dar es Salaam","addressCountry":"TZ"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: hero with an index of what we do, services, app screen carousel and product columns, deep ocean band for Global Authentics, company facts, contact. */
+:root {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --bg: #F2F5F3;
+  --surface: #FFFFFF;
+  --ink: #10211F;
+  --muted: #4D5F5C;
+  --line: #D3DDD9;
+  --deep: #0F3A3D;
+  --on-deep: #E7F1EE;
+  --on-deep-muted: #A9C4BF;
+  --accent: #D9961A;
+  --accent-text: #0F6B6B;
+  --focus: #1E7A80;
+  --phone: #0E1716;
+  --logo-bg: #0F3A3D;
+  --logo-fg: #E7F1EE;
+  --display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1514; --surface: #112120; --ink: #E4EEEB; --muted: #9DB1AD; --line: #23403D;
+    --deep: #0D2E30; --on-deep: #E7F1EE; --on-deep-muted: #9DBBB6;
+    --accent: #F0B13A; --accent-text: #F0B13A; --focus: #5FC3C9;
+    --logo-bg: #E7F1EE; --logo-fg: #0F3A3D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1514; --surface: #112120; --ink: #E4EEEB; --muted: #9DB1AD; --line: #23403D;
+  --deep: #0D2E30; --on-deep: #E7F1EE; --on-deep-muted: #9DBBB6;
+  --accent: #F0B13A; --accent-text: #F0B13A; --focus: #5FC3C9;
+  --logo-bg: #E7F1EE; --logo-fg: #0F3A3D;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; -webkit-font-smoothing: antialiased; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.12; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; }
+section { scroll-margin-top: 80px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-text); }
+
+/* Header */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo { width: 32px; height: 32px; flex: none; }
+.brand b { font-family: var(--display); font-size: 18px; letter-spacing: 0.01em; }
+.brand span { padding-top: 3px; font-size: 13px; color: var(--muted); }
+nav.main { display: flex; gap: 22px; font-size: 15px; }
+nav.main a { text-decoration: none; color: var(--muted); }
+nav.main a:hover { color: var(--ink); }
+.btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; font: 600 15px var(--body); padding: 11px 18px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--ink); color: var(--bg); text-decoration: none; cursor: pointer; }
+.btn:hover { background: transparent; color: var(--ink); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--bg); }
+@media (max-width: 760px) { nav.main { display: none; } .brand span { display: none; } }
+@media (max-width: 420px) { header.site .btn { padding: 9px 14px; font-size: 14px; } .brand b { font-size: 16px; } }
+
+/* Hero */
+.hero .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 64px; align-items: center; padding-block: 88px 80px; }
+.hero h1 { margin-top: 14px; font-size: clamp(32px, 4.5vw, 54px); line-height: 1.08; }
+.hero h1 em { font-style: normal; color: var(--accent-text); }
+.hero .lede { margin-top: 22px; max-width: 34em; font-size: 19px; color: var(--muted); }
+.hero .actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+.index-wrap .eyebrow { color: var(--muted); margin-bottom: 12px; }
+.index { border-top: 2px solid var(--ink); }
+.proof { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: var(--muted); list-style: none; padding: 0; }
+.proof li { display: flex; align-items: center; gap: 8px; }
+.proof li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.index a { display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 12px; padding-block: 15px; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding-left .2s ease; }
+.index a:hover { padding-left: 6px; }
+.index a:hover .t { color: var(--accent-text); }
+.index .t { font-family: var(--display); font-size: 16px; font-weight: 500; }
+.index .s { font-size: 14px; color: var(--muted); }
+.index .arrow { color: var(--muted); }
+.glyph { width: 26px; height: 26px; color: var(--accent); }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; padding-block: 48px; } }
+
+/* Services */
+.services .wrap { padding-block: 80px; }
+.cols.two { grid-template-columns: repeat(2, 1fr); }
+.steps { list-style: none; margin: 56px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--ink); }
+.steps li { padding: 18px 20px 0 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.steps li + li { padding-left: 20px; border-left: 1px solid var(--line); }
+.steps .n { font-family: var(--mono); font-size: 12px; color: var(--accent-text); }
+.steps b { font-family: var(--display); font-weight: 500; font-size: 17px; }
+.steps p { color: var(--muted); font-size: 15px; }
+@media (max-width: 900px) {
+  .cols.two { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .steps li, .steps li + li { padding: 16px 16px 16px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+
+/* App screenshots: a carousel, one app per slide; scroll or swipe right to reach the next app */
+.carousel { margin-bottom: 56px; border-radius: 24px; border: 1px solid var(--line); background: var(--bg); overflow: hidden; }
+.car-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.car-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.car-tabs button { font: 600 14px var(--body); color: var(--muted); background: transparent; border: 1px solid transparent; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.car-tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+.car-arrows { display: flex; gap: 8px; }
+.car-arrows button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 16px; cursor: pointer; }
+.car-arrows button:disabled { opacity: .35; cursor: default; }
+.car-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
+.car-track::-webkit-scrollbar { display: none; }
+.slide { box-sizing: border-box; flex: 0 0 100%; scroll-snap-align: start; padding: 28px 24px 0; display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr); gap: 28px; align-items: end; min-width: 0; }
+.slide-info { align-self: center; display: flex; flex-direction: column; gap: 10px; padding-bottom: 28px; }
+.slide-info h3 { font-size: 24px; }
+.slide-info p { color: var(--muted); font-size: 16px; }
+.slide-info .count { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--accent-text); }
+.phones { display: flex; justify-content: center; gap: 18px; height: 430px; overflow: hidden; }
+.phone { width: 210px; flex: 0 1 210px; min-width: 0; align-self: flex-start; border-radius: 32px; background: var(--phone); padding: 7px; box-shadow: 0 22px 40px -22px rgba(16, 33, 31, .5); }
+.phone:nth-child(2) { margin-top: 26px; }
+.phone img { display: block; width: 100%; height: auto; aspect-ratio: 390 / 844; border-radius: 26px; object-fit: cover; object-position: top; background: var(--surface); }
+@media (max-width: 860px) {
+  .slide { grid-template-columns: 1fr; gap: 18px; padding: 22px 16px 0; }
+  .slide-info { padding-bottom: 0; }
+  .phones { gap: 10px; height: 300px; }
+  .phone { border-radius: 22px; padding: 5px; }
+  .phone img { border-radius: 18px; }
+  .phone:nth-child(2) { margin-top: 14px; }
+}
+@media (max-width: 480px) { .car-arrows { display: none; } }
+@media (prefers-reduced-motion: reduce) { .car-track { scroll-behavior: auto; } }
+
+/* Products */
+.products { background: var(--surface); border-block: 1px solid var(--line); }
+.products .wrap { padding-block: 80px; }
+.sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; margin-bottom: 48px; }
+.sec-head h2 { font-size: clamp(26px, 3.4vw, 40px); margin-top: 10px; }
+.sec-head p { color: var(--muted); max-width: 32em; }
+@media (max-width: 760px) { .sec-head { grid-template-columns: 1fr; gap: 14px; } }
+.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.col { padding: 4px 28px 8px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.col:first-child { border-left: 0; padding-left: 0; }
+.col:last-child { padding-right: 0; }
+.col h3 { font-size: 22px; }
+.col .sw { font-size: 15px; font-style: italic; color: var(--accent-text); margin-top: -6px; }
+.col .what { color: var(--muted); font-size: 16px; }
+.feats { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.feats li { padding-block: 10px; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.4; }
+.meta { margin-top: auto; padding-top: 8px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.meta div { display: grid; grid-template-columns: 82px 1fr; gap: 10px; }
+.meta dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+.meta dd { margin: 0; font-variant-numeric: tabular-nums; }
+.meta a { color: var(--accent-text); font-weight: 600; }
+@media (max-width: 900px) {
+  .cols { grid-template-columns: 1fr; gap: 48px; }
+  .col, .col:first-child, .col:last-child { border-left: 0; padding: 0; }
+}
+
+/* Ocean band: Global Authentics */
+.band { background: var(--deep); color: var(--on-deep); }
+.band .wrap { padding-block: 84px; display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; }
+.band h2 { margin-top: 10px; font-size: clamp(26px, 3.4vw, 40px); }
+.band .eyebrow { color: var(--accent); }
+.band .intro { margin-top: 18px; color: var(--on-deep-muted); max-width: 30em; }
+.brands { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px; }
+.brands span { font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--on-deep) 25%, transparent); }
+.links { display: flex; flex-direction: column; }
+.link-row { display: grid; grid-template-columns: 1fr 28px 1fr; align-items: center; gap: 10px; padding-block: 20px; border-top: 1px solid color-mix(in srgb, var(--on-deep) 18%, transparent); }
+.link-row:last-child { border-bottom: 1px solid color-mix(in srgb, var(--on-deep) 18%, transparent); }
+.link-row .from, .link-row .to { font-size: 16px; }
+.link-row .from b, .link-row .to b { display: block; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
+.link-row .plus { color: var(--accent); font-family: var(--display); font-size: 18px; text-align: center; }
+@media (max-width: 860px) { .band .wrap { grid-template-columns: 1fr; gap: 36px; padding-block: 64px; } }
+@media (max-width: 480px) { .link-row { grid-template-columns: 1fr; gap: 6px; } .link-row .plus { text-align: left; } }
+
+/* Company facts */
+.company .wrap { padding-block: 80px; }
+.company .eyebrow { margin-bottom: 16px; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--ink); margin: 0; }
+.fact { padding: 18px 20px 18px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.fact + .fact { padding-left: 20px; border-left: 1px solid var(--line); }
+.fact dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.fact dd { margin: 0; font-family: var(--display); font-weight: 500; font-size: 18px; line-height: 1.3; }
+.company .about { margin-top: 40px; max-width: 42em; color: var(--muted); }
+.company .about + .about { margin-top: 14px; }
+@media (max-width: 860px) {
+  .facts { grid-template-columns: 1fr 1fr; }
+  .fact, .fact + .fact { padding: 16px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .fact:nth-child(odd) { padding-right: 16px; }
+}
+
+/* Contact */
+.contact { background: var(--surface); border-top: 1px solid var(--line); }
+.contact .wrap { padding-block: 80px; display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; }
+.contact h2 { font-size: clamp(26px, 3.4vw, 40px); margin-top: 10px; }
+.contact .side { display: flex; flex-direction: column; gap: 22px; }
+.contact .side p { color: var(--muted); }
+.reach { display: flex; flex-direction: column; gap: 12px; font-size: 16px; margin: 0; }
+.reach div { display: grid; grid-template-columns: 90px 1fr; gap: 10px; }
+.reach dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+.reach dd { margin: 0; }
+.reach a { color: var(--accent-text); font-weight: 600; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+form .full { grid-column: 1 / -1; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; min-width: 0; }
+input, select, textarea { font: 16px var(--body); color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 12px; width: 100%; box-sizing: border-box; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--focus); }
+textarea { min-height: 120px; resize: vertical; }
+.send-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.form-note { font-size: 14px; color: var(--muted); }
+@media (max-width: 860px) { .contact .wrap { grid-template-columns: 1fr; gap: 40px; padding-block: 64px; } }
+@media (max-width: 520px) { form { grid-template-columns: 1fr; } }
+
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-block: 28px; font-size: 14px; color: var(--muted); }
+footer .copy { display: flex; align-items: center; gap: 10px; }
+footer .logo { width: 24px; height: 24px; }
+footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
+
+/* Motion: load sequence in the hero, reveal-on-scroll below it, small hover moves. All of it is skipped for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero .eyebrow, .hero h1, .hero .lede, .hero .actions, .proof { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero h1 { animation-delay: .06s; } .hero .lede { animation-delay: .14s; } .hero .actions { animation-delay: .22s; } .proof { animation-delay: .3s; }
+  .index-wrap .eyebrow { animation: fade .6s .2s both; }
+  .index a { animation: slide-in .7s cubic-bezier(.2, .7, .2, 1) both; }
+  .index a:nth-child(1) { animation-delay: .28s; } .index a:nth-child(2) { animation-delay: .36s; } .index a:nth-child(3) { animation-delay: .44s; }
+  .index a:nth-child(4) { animation-delay: .52s; } .index a:nth-child(5) { animation-delay: .6s; }
+  .logo circle { transform-box: fill-box; transform-origin: center; animation: pop .7s .45s cubic-bezier(.3, 1.6, .5, 1) both; }
+  .index a .arrow { transition: transform .25s ease; }
+  .index a:hover .arrow { transform: translateY(3px); }
+
+  .js .rv { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2, .7, .2, 1), transform .8s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--d, 0s); }
+  .js .rv.in { opacity: 1; transform: none; }
+
+  .steps { position: relative; }
+  .steps::before { content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 1.4s cubic-bezier(.6, 0, .2, 1) .3s; }
+  .steps.in::before, .steps:not(.rv-line)::before { transform: scaleX(1); }
+
+  .phone { transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s ease; }
+  .phone:hover { transform: translateY(-8px); box-shadow: 0 32px 50px -24px rgba(16, 33, 31, .55); }
+  .slide.active .phone { animation: phone-in .8s cubic-bezier(.2, .7, .2, 1) both; }
+  .slide.active .phone:nth-child(2) { animation-delay: .1s; } .slide.active .phone:nth-child(3) { animation-delay: .2s; }
+  .slide.active .slide-info > * { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
+  .slide.active .slide-info > :nth-child(2) { animation-delay: .06s; } .slide.active .slide-info > :nth-child(3) { animation-delay: .12s; }
+
+  .link-row .plus { transition: transform .3s ease; }
+  .link-row:hover .plus { transform: translateX(6px); }
+  .btn { transition: background-color .2s ease, color .2s ease, transform .2s ease; }
+  .btn:hover { transform: translateY(-1px); }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes slide-in { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: none; } }
+  @keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
+  @keyframes phone-in { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="g-code" viewBox="0 0 26 26"><path d="M9 7 3 13l6 6M17 7l6 6-6 6M14.5 4.5l-3 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="g-advice" viewBox="0 0 26 26"><path d="M4 5h18v12H11l-5 4v-4H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 9.5h9M8.5 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="g-mauzo" viewBox="0 0 26 26"><path d="M6 3h14v20l-2.3-1.6L15.4 23 13 21.4 10.6 23l-2.3-1.6L6 23z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 9h7M9.5 13h7M9.5 17h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="g-soko" viewBox="0 0 26 26"><path d="M5 9h16l-1.4 13H6.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 11V7.5a3.5 3.5 0 0 1 7 0V11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="g-staff" viewBox="0 0 26 26"><circle cx="10" cy="9" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 21a6.5 6.5 0 0 1 13 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="8" r="2.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18.5 14a5 5 0 0 1 4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="g-watch" viewBox="0 0 26 26"><rect x="7" y="7" width="12" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 7 10.5 2.5h5L16.5 7M9.5 19l1 4.5h5l1-4.5M13 10.5V13l1.8 1.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--logo-bg)"/><path d="M8.5 23V10l7.5 7.5L23.5 10v13" fill="none" stroke="var(--logo-fg)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="9.5" r="3.2" fill="var(--accent)"/></svg><b>MWENDAVANO</b><span>Holdings Limited</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#retail">Global Authentics</a>
+      <a href="#company">Company</a>
+    </nav>
+    <a class="btn" href="#contact">Start a project</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Software &amp; consultancy · Dar es Salaam</p>
+        <h1>We build software for Tanzanian businesses, <em>and run on it ourselves.</em></h1>
+        <p class="lede">Mwendavano Holdings designs and builds custom web and mobile systems, and advises businesses on the technology they need. We also make the Dukani apps and run our own retail store, Global Authentics, on them.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Start a project</a>
+          <a class="btn ghost" href="#services">What we do</a>
+        </div>
+        <ul class="proof">
+          <li>3 Dukani apps in use</li>
+          <li>Our own store runs on our software</li>
+          <li>Swahili and English</li>
+        </ul>
+      </div>
+      <div class="index-wrap">
+      <p class="eyebrow">What we do</p>
+      <div class="index" aria-label="What we do">
+        <a href="#services">
+          <svg class="glyph"><use href="#g-code"/></svg>
+          <span><span class="t">Software &amp; consultancy</span><br><span class="s">Custom systems built for your business</span></span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+        <a href="#mauzo">
+          <svg class="glyph"><use href="#g-mauzo"/></svg>
+          <span><span class="t">Dukani Mauzo</span><br><span class="s">Sales, stock and receipts for shops</span></span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+        <a href="#soko">
+          <svg class="glyph"><use href="#g-soko"/></svg>
+          <span><span class="t">Dukani Soko</span><br><span class="s">Buyers shop from every Dukani shop</span></span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+        <a href="#wafanyakazi">
+          <svg class="glyph"><use href="#g-staff"/></svg>
+          <span><span class="t">Dukani Wafanyakazi</span><br><span class="s">Attendance, leave and payroll</span></span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+        <a href="#retail">
+          <svg class="glyph"><use href="#g-watch"/></svg>
+          <span><span class="t">Global Authentics</span><br><span class="s">Our retail store for original wearables</span></span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Services</p>
+          <h2>Software creation and IT consultancy</h2>
+        </div>
+        <p>We take on projects for businesses and organisations that need more than an off-the-shelf app. The same team that builds Dukani builds your system.</p>
+      </div>
+
+      <div class="cols two">
+        <article class="col">
+          <svg class="glyph"><use href="#g-code"/></svg>
+          <h3>Software development</h3>
+          <p class="what">Web and mobile systems designed around how your business actually works, from first sketch to launch and support.</p>
+          <ul class="feats">
+            <li>Mobile apps for Android and iPhone</li>
+            <li>Web systems, dashboards and admin portals</li>
+            <li>Sales, stock, HR and payroll systems</li>
+            <li>WhatsApp ordering, SMS alerts and online stores</li>
+            <li>Swahili and English from day one</li>
+          </ul>
+        </article>
+        <article class="col">
+          <svg class="glyph"><use href="#g-advice"/></svg>
+          <h3>IT consultancy</h3>
+          <p class="what">Clear advice on what to build, what to buy and how to run it, from people who run their own business on software.</p>
+          <ul class="feats">
+            <li>Moving from paper and spreadsheets to a system</li>
+            <li>Choosing and setting up software and hardware</li>
+            <li>Reviewing an existing system or project</li>
+            <li>Hosting, backups and day-to-day IT management</li>
+            <li>Training your staff to use it</li>
+          </ul>
+        </article>
+      </div>
+
+      <ol class="steps" aria-label="How a project runs">
+        <li><span class="n">01</span><b>Understand</b><p>We visit, watch how work is done today and agree what success looks like.</p></li>
+        <li><span class="n">02</span><b>Design</b><p>You see and click through the screens before any code is written.</p></li>
+        <li><span class="n">03</span><b>Build</b><p>We deliver in short steps so you test real working parts every week or two.</p></li>
+        <li><span class="n">04</span><b>Launch &amp; support</b><p>We train your team, go live and stay on to fix and improve.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Our products</p>
+          <h2>The Dukani apps</h2>
+        </div>
+        <p>Our own products, and proof of what we build for clients. Three apps that work together. They run on Android, iPhone and the web, in Swahili and English, and you pay by mobile money.</p>
+      </div>
+
+      <div class="carousel" aria-roledescription="carousel" aria-label="App screens">
+        <div class="car-bar">
+          <div class="car-tabs" role="tablist">
+            <button type="button" role="tab" aria-selected="true" aria-controls="slide-1" data-go="0">Dukani Mauzo</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="slide-2" data-go="1">Dukani Soko</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="slide-3" data-go="2">Dukani Wafanyakazi</button>
+          </div>
+          <div class="car-arrows">
+            <button type="button" id="car-prev" aria-label="Previous app">←</button>
+            <button type="button" id="car-next" aria-label="Next app">→</button>
+          </div>
+        </div>
+        <div class="car-track" id="car-track" tabindex="0">
+          <!-- One slide per app. To add an app: copy a slide section, give it the next id, and add a matching tab button above. -->
+          <section class="slide" id="slide-1" role="tabpanel" aria-label="Dukani Mauzo">
+            <div class="slide-info">
+              <span class="count"></span>
+              <h3>Dukani Mauzo</h3>
+              <p>The shop app: today’s sales and profit, products with stock levels, and every sale with its receipt.</p>
+            </div>
+            <div class="phones">
+              <div class="phone"><img src="img/app-home.jpg" alt="Dukani Mauzo home screen with today's sales and profit" loading="lazy"></div>
+              <div class="phone"><img src="img/app-items.jpg" alt="Dukani Mauzo products screen" loading="lazy"></div>
+              <div class="phone"><img src="img/app-sales.jpg" alt="Dukani Mauzo sales screen" loading="lazy"></div>
+            </div>
+          </section>
+          <section class="slide" id="slide-2" role="tabpanel" aria-label="Dukani Soko">
+            <div class="slide-info">
+              <span class="count"></span>
+              <h3>Dukani Soko</h3>
+              <p>The buyer app: new arrivals from every Dukani shop, product pages with stock left, and checkout with delivery or pickup, paid on arrival.</p>
+            </div>
+            <div class="phones">
+              <div class="phone"><img src="img/soko-home.jpg" alt="Dukani Soko home screen with featured products, categories and shops" loading="lazy"></div>
+              <div class="phone"><img src="img/soko-product.jpg" alt="Dukani Soko product page with price, stock left and the selling shop" loading="lazy"></div>
+              <div class="phone"><img src="img/soko-checkout.jpg" alt="Dukani Soko checkout with delivery or pickup and pay on arrival" loading="lazy"></div>
+            </div>
+          </section>
+          <section class="slide" id="slide-3" role="tabpanel" aria-label="Dukani Wafanyakazi">
+            <div class="slide-info">
+              <span class="count"></span>
+              <h3>Dukani Wafanyakazi</h3>
+              <p>The HR app: who is at work today, the whole team at a glance, and advance and leave requests to approve.</p>
+            </div>
+            <div class="phones">
+              <div class="phone"><img src="img/wf-today.jpg" alt="Wafanyakazi today screen with who is at work" loading="lazy"></div>
+              <div class="phone"><img src="img/wf-team.jpg" alt="Wafanyakazi team list with attendance status" loading="lazy"></div>
+              <div class="phone"><img src="img/wf-requests.jpg" alt="Wafanyakazi advance and leave requests" loading="lazy"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="cols">
+        <article class="col" id="mauzo">
+          <svg class="glyph"><use href="#g-mauzo"/></svg>
+          <h3>Dukani Mauzo</h3>
+          <p class="sw">Duka lako, mfukoni mwako.</p>
+          <p class="what">The shop app. Record sales, send receipts and see today’s profit, on your phone or a computer.</p>
+          <ul class="feats">
+            <li>Sales with receipts on WhatsApp or print</li>
+            <li>Stock that updates with every sale</li>
+            <li>Mkopo: credit sales and payment reminders</li>
+            <li>Warranty cards with serial numbers</li>
+            <li>Sales summary by SMS every evening at 9pm</li>
+          </ul>
+          <dl class="meta">
+            <div><dt>Price</dt><dd>Free plan, then from TZS 9,900 / month</dd></div>
+            <div><dt>Trial</dt><dd>14 days, no bank card</dd></div>
+            <div><dt>Web</dt><dd><a href="https://dukanimauzo.com" target="_blank" rel="noopener">dukanimauzo.com</a></dd></div>
+          </dl>
+        </article>
+
+        <article class="col" id="soko">
+          <svg class="glyph"><use href="#g-soko"/></svg>
+          <h3>Dukani Soko</h3>
+          <p class="sw">Mpya sokoni, kila siku.</p>
+          <p class="what">The buyer app. Shoppers browse products from every Dukani shop in one place and message the shop to order.</p>
+          <ul class="feats">
+            <li>One marketplace for all Dukani shops</li>
+            <li>New arrivals as soon as shops list them</li>
+            <li>Ask the shop on WhatsApp in one tap</li>
+            <li>Delivery or pickup, pay when you receive</li>
+            <li>Shops list products straight from Dukani Mauzo</li>
+          </ul>
+          <dl class="meta">
+            <div><dt>For</dt><dd>Buyers, free to use</dd></div>
+            <div><dt>Shops</dt><dd>Included with Dukani Mauzo</dd></div>
+          </dl>
+        </article>
+
+        <article class="col" id="wafanyakazi">
+          <svg class="glyph"><use href="#g-staff"/></svg>
+          <h3>Dukani Wafanyakazi</h3>
+          <p class="sw">Mahudhurio na mishahara, bila daftari.</p>
+          <p class="what">Simple HR for businesses with 3 to 40 staff, for owners, managers and workers in one app.</p>
+          <ul class="feats">
+            <li>Attendance with GPS check-in or a shared kiosk phone</li>
+            <li>Salary advances and leave requests</li>
+            <li>Payroll with NSSF, PAYE, SDL and WCF</li>
+            <li>Payslips and monthly reports</li>
+          </ul>
+          <dl class="meta">
+            <div><dt>For</dt><dd>3 to 40 employees</dd></div>
+            <div><dt>Runs on</dt><dd>Android, iPhone and web</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="retail">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Retail</p>
+        <h2>Global Authentics TZ</h2>
+        <p class="intro">Our own store for original smartwatches, earbuds and accessories, new and certified used, in Kariakoo, Dar es Salaam. It is also where we test every feature before it reaches other shops.</p>
+        <div class="brands" aria-label="Brands we sell">
+          <span>Samsung</span><span>Amazfit</span><span>Xiaomi</span><span>Nothing</span><span>Google Pixel</span>
+        </div>
+      </div>
+      <div class="links">
+        <div class="link-row">
+          <div class="from"><b>At the counter</b>Every sale, receipt and warranty card</div>
+          <div class="plus" aria-hidden="true">→</div>
+          <div class="to"><b>Runs on</b>Dukani Mauzo</div>
+        </div>
+        <div class="link-row">
+          <div class="from"><b>Back office</b>Stock, prices and WhatsApp orders on the go</div>
+          <div class="plus" aria-hidden="true">→</div>
+          <div class="to"><b>Runs on</b>Our own admin app</div>
+        </div>
+        <div class="link-row">
+          <div class="from"><b>Online</b>Customers browse and order</div>
+          <div class="plus" aria-hidden="true">→</div>
+          <div class="to"><b>Runs on</b>Dukani Soko and WhatsApp</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="company" id="company">
+    <div class="wrap">
+      <p class="eyebrow">Company</p>
+      <dl class="facts">
+        <div class="fact"><dt>Legal name</dt><dd>Mwendavano Holdings Limited</dd></div>
+        <div class="fact"><dt>Type</dt><dd>Private company limited by shares</dd></div>
+        <div class="fact"><dt>Registered under</dt><dd>Companies Act, Cap. 212</dd></div>
+        <div class="fact"><dt>Based in</dt><dd>Dar es Salaam, 2026</dd></div>
+      </dl>
+      <p class="about">Mwendavano Holdings is a Tanzanian software development and IT consultancy company. We started by building tools for our own electronics shop, because nothing on the market worked the way a Tanzanian duka does: in Swahili, on a phone, with mobile money and sales on credit.</p>
+      <p class="about">Those tools became the Dukani apps. Now we bring the same approach to client projects: software that fits the business, built and supported locally.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="side">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Tell us what you need</h2>
+        </div>
+        <p>Have a system you want built, a project that needs a second opinion, or want Dukani for your shop? Send a short note on WhatsApp and we’ll reply.</p>
+        <dl class="reach">
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/255789947608" target="_blank" rel="noopener">+255 789 947 608</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+255789947608">+255 789 947 608</a></dd></div>
+          <div><dt>Office</dt><dd>Dar es Salaam, Tanzania</dd></div>
+          <div><dt>Store</dt><dd>Global Authentics, Kariakoo<br>info@globalauthentic.co.tz</dd></div>
+        </dl>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <label>Name<input id="f-name" name="name" autocomplete="name" required></label>
+        <label>Phone or email<input id="f-reach" name="reach" required></label>
+        <label class="full">What is it about?
+          <select id="f-topic" name="topic">
+            <option>A custom software project</option>
+            <option>IT consultancy</option>
+            <option>Dukani Mauzo for my shop</option>
+            <option>Dukani Wafanyakazi for my team</option>
+            <option>Dukani Soko</option>
+            <option>Global Authentics products</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label class="full">Message<textarea id="f-msg" name="message" required></textarea></label>
+        <div class="full send-row">
+          <button class="btn" type="submit">Send on WhatsApp</button>
+          <p class="form-note" id="form-note" role="status">Opens WhatsApp with your message ready to send.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="copy"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--logo-bg)"/><path d="M8.5 23V10l7.5 7.5L23.5 10v13" fill="none" stroke="var(--logo-fg)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="9.5" r="3.2" fill="var(--accent)"/></svg>© 2026 Mwendavano Holdings Limited</span>
+    <span>WhatsApp <a href="https://wa.me/255789947608" target="_blank" rel="noopener">+255 789 947 608</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Reveal sections as they scroll in. Only elements below the first screen are hidden first, so the page is complete at rest.
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var groups = ['.sec-head > *', '.services .col', '.steps li', '.carousel', '.products .col', '.band .wrap > div:first-child > *', '.link-row', '.fact', '.company .about', '.contact .side > *', '.contact form'];
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  groups.forEach(function (sel) {
+    document.querySelectorAll(sel).forEach(function (el, i) {
+      if (el.getBoundingClientRect().top < window.innerHeight) return;
+      el.classList.add('rv');
+      el.style.setProperty('--d', (i % 4) * 0.09 + 's');
+      io.observe(el);
+    });
+  });
+  var steps = document.querySelector('.steps');
+  if (steps && steps.getBoundingClientRect().top >= window.innerHeight) { steps.classList.add('rv-line'); io.observe(steps); }
+})();
+(function () {
+  var track = document.getElementById('car-track');
+  var slides = track.querySelectorAll('.slide');
+  var tabs = document.querySelectorAll('.car-tabs [data-go]');
+  var prev = document.getElementById('car-prev'), next = document.getElementById('car-next');
+  function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function go(i) { i = Math.max(0, Math.min(slides.length - 1, i)); track.scrollTo({ left: i * track.clientWidth }); }
+  slides.forEach(function (sl, k) { var c = sl.querySelector('.count'); if (c) c.textContent = (k + 1) + ' / ' + slides.length; });
+  function sync() {
+    var i = current();
+    tabs.forEach(function (t, k) { t.setAttribute('aria-selected', k === i ? 'true' : 'false'); });
+    slides.forEach(function (sl, k) { sl.classList.toggle('active', k === i); });
+    prev.disabled = i === 0; next.disabled = i === slides.length - 1;
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { go(+t.dataset.go); }); });
+  prev.addEventListener('click', function () { go(current() - 1); });
+  next.addEventListener('click', function () { go(current() + 1); });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); }
+  });
+  track.addEventListener('scroll', function () { window.requestAnimationFrame(sync); }, { passive: true });
+  sync();
+})();
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var note = document.getElementById('form-note');
+  var missing = ['f-name', 'f-reach', 'f-msg'].filter(function (id) { return !document.getElementById(id).value.trim(); });
+  if (missing.length) {
+    note.textContent = 'Fill in your name, a way to reach you, and a message.';
+    document.getElementById(missing[0]).focus();
+    return;
+  }
+  var v = function (id) { return document.getElementById(id).value.trim(); };
+  var text = 'Habari Mwendavano,\n\n' + v('f-msg') + '\n\nTopic: ' + v('f-topic') + '\nName: ' + v('f-name') + '\nContact: ' + v('f-reach');
+  var url = 'https://wa.me/255789947608?text=' + encodeURIComponent(text);
+  note.innerHTML = 'Opening WhatsApp. If nothing opens, <a href="' + url + '" target="_blank" rel="noopener">tap here</a> or message +255 789 947 608.';
+  var w = window.open(url, '_blank');
+  if (w) { w.opener = null; } else { window.location.href = url; }
+});
+</script>
+</body>
+</html>
