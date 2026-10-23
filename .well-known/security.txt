@@ -1,0 +1,4 @@
+Contact: mailto:support@mwendavano.com
+Expires: 2027-10-23T00:00:00.000Z
+Preferred-Languages: en, sw
+Canonical: https://mwendavano.com/.well-known/security.txt
