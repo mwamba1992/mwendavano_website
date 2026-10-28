@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mwendavano Holdings · Software and IT consultancy in Tanzania</title>
-<meta name="description" content="Mwendavano Holdings builds custom web and mobile software for Tanzanian businesses, offers IT consultancy, and makes the Dukani apps: Dukani Mauzo, Dukani Soko and Dukani Wafanyakazi.">
+<meta name="description" content="Mwendavano Holdings builds custom web and mobile software for Tanzanian businesses, offers IT consultancy, and makes the Dukani apps (Dukani Mauzo, Dukani Soko and Dukani Wafanyakazi) and Mwendavano Cargo for China to Tanzania cargo agents.">
 <link rel="canonical" href="https://mwendavano.com/">
 <link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
 <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mwendavano Holdings">
 <meta property="og:title" content="Mwendavano Holdings · Software and IT consultancy in Tanzania">
-<meta property="og:description" content="Custom web and mobile systems, IT consultancy, and the Dukani apps. Built in Dar es Salaam.">
+<meta property="og:description" content="Custom web and mobile systems, IT consultancy, the Dukani apps and Mwendavano Cargo. Built in Dar es Salaam.">
 <meta property="og:url" content="https://mwendavano.com/">
 <meta property="og:image" content="https://mwendavano.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -174,7 +174,7 @@ nav.main a:hover { color: var(--ink); }
 .sec-head h2 { font-size: clamp(26px, 3.4vw, 40px); margin-top: 10px; }
 .sec-head p { color: var(--muted); max-width: 32em; }
 @media (max-width: 760px) { .sec-head { grid-template-columns: 1fr; gap: 14px; } }
-.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
 .col { padding: 4px 28px 8px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .col:first-child { border-left: 0; padding-left: 0; }
 .col:last-child { padding-right: 0; }
@@ -188,6 +188,11 @@ nav.main a:hover { color: var(--ink); }
 .meta dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
 .meta dd { margin: 0; font-variant-numeric: tabular-nums; }
 .meta a { color: var(--accent-text); font-weight: 600; }
+@media (max-width: 1180px) and (min-width: 901px) {
+  .products .cols { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
+  .products .col:nth-child(3) { border-left: 0; padding-left: 0; }
+  .products .col:nth-child(2) { padding-right: 0; }
+}
 @media (max-width: 900px) {
   .cols { grid-template-columns: 1fr; gap: 48px; }
   .col, .col:first-child, .col:last-child { border-left: 0; padding: 0; }
@@ -275,7 +280,7 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
   .index-wrap .eyebrow { animation: fade .6s .2s both; }
   .index a { animation: slide-in .7s cubic-bezier(.2, .7, .2, 1) both; }
   .index a:nth-child(1) { animation-delay: .28s; } .index a:nth-child(2) { animation-delay: .36s; } .index a:nth-child(3) { animation-delay: .44s; }
-  .index a:nth-child(4) { animation-delay: .52s; } .index a:nth-child(5) { animation-delay: .6s; }
+  .index a:nth-child(4) { animation-delay: .52s; } .index a:nth-child(5) { animation-delay: .6s; } .index a:nth-child(6) { animation-delay: .68s; }
   .logo circle { transform-box: fill-box; transform-origin: center; animation: pop .7s .45s cubic-bezier(.3, 1.6, .5, 1) both; }
   .index a .arrow { transition: transform .25s ease; }
   .index a:hover .arrow { transform: translateY(3px); }
@@ -316,6 +321,7 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
   <symbol id="g-mauzo" viewBox="0 0 26 26"><path d="M6 3h14v20l-2.3-1.6L15.4 23 13 21.4 10.6 23l-2.3-1.6L6 23z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 9h7M9.5 13h7M9.5 17h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="g-soko" viewBox="0 0 26 26"><path d="M5 9h16l-1.4 13H6.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 11V7.5a3.5 3.5 0 0 1 7 0V11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="g-staff" viewBox="0 0 26 26"><circle cx="10" cy="9" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 21a6.5 6.5 0 0 1 13 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="8" r="2.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18.5 14a5 5 0 0 1 4.5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="g-cargo" viewBox="0 0 26 26"><path d="M3 16h20l-2.6 5.5H5.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 16V9h6v7M13 16v-5h6v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 4.5v4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="g-watch" viewBox="0 0 26 26"><rect x="7" y="7" width="12" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 7 10.5 2.5h5L16.5 7M9.5 19l1 4.5h5l1-4.5M13 10.5V13l1.8 1.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
@@ -370,6 +376,11 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
         <a href="#wafanyakazi">
           <svg class="glyph"><use href="#g-staff"/></svg>
           <span><span class="t">Dukani Wafanyakazi</span><br><span class="s">Attendance, leave and payroll</span></span>
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+        <a href="#cargo">
+          <svg class="glyph"><use href="#g-cargo"/></svg>
+          <span><span class="t">Mwendavano Cargo</span><br><span class="s">For China to Tanzania cargo agents</span></span>
           <span class="arrow" aria-hidden="true">↓</span>
         </a>
         <a href="#retail">
@@ -433,9 +444,9 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
       <div class="sec-head">
         <div>
           <p class="eyebrow">Our products</p>
-          <h2>The Dukani apps</h2>
+          <h2>Our apps</h2>
         </div>
-        <p>Our own products, and proof of what we build for clients. Three apps that work together. They run on Android, iPhone and the web, in Swahili and English, and you pay by mobile money.</p>
+        <p>Our own products, and proof of what we build for clients. Three Dukani apps that work together, and Mwendavano Cargo for cargo agents. They run on Android, iPhone and the web, and you pay by mobile money.</p>
       </div>
 
       <div class="carousel" aria-roledescription="carousel" aria-label="App screens">
@@ -444,6 +455,7 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
             <button type="button" role="tab" aria-selected="true" aria-controls="slide-1" data-go="0">Dukani Mauzo</button>
             <button type="button" role="tab" aria-selected="false" aria-controls="slide-2" data-go="1">Dukani Soko</button>
             <button type="button" role="tab" aria-selected="false" aria-controls="slide-3" data-go="2">Dukani Wafanyakazi</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="slide-4" data-go="3">Mwendavano Cargo</button>
           </div>
           <div class="car-arrows">
             <button type="button" id="car-prev" aria-label="Previous app">←</button>
@@ -486,6 +498,18 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
               <div class="phone"><img src="img/wf-today.jpg" alt="Wafanyakazi today screen with who is at work" loading="lazy"></div>
               <div class="phone"><img src="img/wf-team.jpg" alt="Wafanyakazi team list with attendance status" loading="lazy"></div>
               <div class="phone"><img src="img/wf-requests.jpg" alt="Wafanyakazi advance and leave requests" loading="lazy"></div>
+            </div>
+          </section>
+          <section class="slide" id="slide-4" role="tabpanel" aria-label="Mwendavano Cargo">
+            <div class="slide-info">
+              <span class="count"></span>
+              <h3>Mwendavano Cargo</h3>
+              <p>The cargo agent app: receive a parcel in China with photos and size, load containers, and the trader follows their goods to pickup in Dar.</p>
+            </div>
+            <div class="phones">
+              <div class="phone"><img src="img/cargo-home.jpg" alt="Mwendavano Cargo home screen with parcels received today, to load and to release" loading="lazy"></div>
+              <div class="phone"><img src="img/cargo-receive.jpg" alt="Mwendavano Cargo receive parcel screen with customer code, goods type and photos" loading="lazy"></div>
+              <div class="phone"><img src="img/cargo-track.jpg" alt="Mwendavano Cargo trader view of a shipment ready for pickup with the balance to pay" loading="lazy"></div>
             </div>
           </section>
         </div>
@@ -544,6 +568,25 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
           <dl class="meta">
             <div><dt>For</dt><dd>3 to 40 employees</dd></div>
             <div><dt>Runs on</dt><dd>Android, iPhone and web</dd></div>
+          </dl>
+        </article>
+
+        <article class="col" id="cargo">
+          <svg class="glyph"><use href="#g-cargo"/></svg>
+          <h3>Mwendavano Cargo</h3>
+          <p class="sw">Mzigo wako, kila hatua.</p>
+          <p class="what">For cargo agents shipping traders’ goods from China to Tanzania, from the warehouse to the pickup desk.</p>
+          <ul class="feats">
+            <li>Receive parcels with photos, weight and CBM</li>
+            <li>Load containers and flights, move them forward</li>
+            <li>Traders get an SMS at every step, with a tracking link</li>
+            <li>Invoices in TZS and USD, paid by mobile money</li>
+            <li>Goods released only with a code sent to the trader</li>
+          </ul>
+          <dl class="meta">
+            <div><dt>For</dt><dd>Cargo agents and their traders</dd></div>
+            <div><dt>Trial</dt><dd>30 days free</dd></div>
+            <div><dt>Web</dt><dd><a href="https://cargo.mwendavano.com" target="_blank" rel="noopener">cargo.mwendavano.com</a></dd></div>
           </dl>
         </article>
       </div>
@@ -621,6 +664,7 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
             <option>Dukani Mauzo for my shop</option>
             <option>Dukani Wafanyakazi for my team</option>
             <option>Dukani Soko</option>
+            <option>Mwendavano Cargo for my cargo business</option>
             <option>Global Authentics products</option>
             <option>Something else</option>
           </select>
