@@ -6,6 +6,7 @@ Static company website for Mwendavano Holdings Limited. No build step: upload th
 |---|---|
 | `index.html` | The whole site (styles and script inline; fonts from Google Fonts) |
 | `img/` | App screenshots for the carousel (Dukani Mauzo, Dukani Soko, Dukani Wafanyakazi, Mwendavano Cargo; demo data only) |
+| `img/badges/` | Official store badges (Apple "Download on the App Store" black SVG, Google "Get it on Google Play" PNG, padding trimmed) used under each app |
 | `js/` | Page scripts (kept out of index.html so the Content-Security-Policy can allow only this site) |
 | `favicon.svg` | Logo mark |
 | `og.jpg` | Link preview image (1200×630) for WhatsApp, Facebook, LinkedIn |

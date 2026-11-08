@@ -198,6 +198,18 @@ nav.main a:hover { color: var(--ink); }
   .col, .col:first-child, .col:last-child { border-left: 0; padding: 0; }
 }
 
+/* Store badges under each app column. Official artwork saved in img/badges/; "soon" badges are not links. */
+.stores { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px 10px; }
+.stores .lbl { flex-basis: 100%; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.store { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 5px; text-decoration: none; border-radius: 8px; }
+.store img { display: block; height: 40px; width: auto; }
+a.store:hover img { opacity: .85; }
+.store.soon img { opacity: .4; filter: grayscale(1); }
+.store.soon small { font-size: 12px; line-height: 1.3; color: var(--muted); }
+@media (max-width: 480px) { .stores { display: grid; justify-items: start; gap: 12px; } .store img { height: 44px; } }
+footer .apps { display: flex; flex-wrap: wrap; gap: 4px 14px; flex-basis: 100%; }
+footer .apps a { font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
 /* Ocean band: Global Authentics */
 .band { background: var(--deep); color: var(--on-deep); }
 .band .wrap { padding-block: 84px; display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; }
@@ -533,6 +545,12 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
             <div><dt>Trial</dt><dd>14 days, no bank card</dd></div>
             <div><dt>Web</dt><dd><a href="https://dukanimauzo.com" target="_blank" rel="noopener">dukanimauzo.com</a></dd></div>
           </dl>
+          <div class="stores">
+            <span class="lbl">Pakua programu · Get the app</span>
+            <a class="store" href="https://apps.apple.com/tz/app/dukani-mauzo/id6825214528" target="_blank" rel="noopener"><img src="img/badges/app-store.svg" width="120" height="40" alt="Pakua Dukani Mauzo kwenye App Store (Download on the App Store)"></a>
+            <!-- Google Play (coming soon). When live, make this a link: https://play.google.com/store/apps/details?id=tz.dukani.admin -->
+            <span class="store soon"><img src="img/badges/google-play.png" width="132" height="40" alt="Dukani Mauzo kwenye Google Play: inakuja hivi karibuni (coming soon)"><small>Inakuja hivi karibuni · Coming soon</small></span>
+          </div>
         </article>
 
         <article class="col" id="soko">
@@ -552,6 +570,12 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
             <div><dt>Web</dt><dd><a href="https://dukanisoko.com" target="_blank" rel="noopener">dukanisoko.com</a></dd></div>
             <div><dt>Shops</dt><dd>Included with Dukani Mauzo</dd></div>
           </dl>
+          <div class="stores">
+            <span class="lbl">Pakua programu · Get the app</span>
+            <a class="store" href="https://apps.apple.com/tz/app/dukani-sokoni/id6825765848" target="_blank" rel="noopener"><img src="img/badges/app-store.svg" width="120" height="40" alt="Pakua Dukani Sokoni kwenye App Store (Download on the App Store)"></a>
+            <!-- Google Play (coming soon). When live, make this a link: https://play.google.com/store/apps/details?id=tz.dukani.shop -->
+            <span class="store soon"><img src="img/badges/google-play.png" width="132" height="40" alt="Dukani Sokoni kwenye Google Play: inakuja hivi karibuni (coming soon)"><small>Inakuja hivi karibuni · Coming soon</small></span>
+          </div>
         </article>
 
         <article class="col" id="wafanyakazi">
@@ -569,6 +593,13 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
             <div><dt>For</dt><dd>3 to 40 employees</dd></div>
             <div><dt>Runs on</dt><dd>Android, iPhone and web</dd></div>
           </dl>
+          <div class="stores">
+            <span class="lbl">Pakua programu · Get the app</span>
+            <!-- App Store: not published yet; when it is, make this a link like the other apps. -->
+            <span class="store soon"><img src="img/badges/app-store.svg" width="120" height="40" alt="Dukani Wafanyakazi kwenye App Store: inakuja hivi karibuni (coming soon)"><small>Inakuja hivi karibuni · Coming soon</small></span>
+            <!-- Google Play (coming soon). When live, make this a link: https://play.google.com/store/apps/details?id=tz.co.dukani.wafanyakazi -->
+            <span class="store soon"><img src="img/badges/google-play.png" width="132" height="40" alt="Dukani Wafanyakazi kwenye Google Play: inakuja hivi karibuni (coming soon)"><small>Inakuja hivi karibuni · Coming soon</small></span>
+          </div>
         </article>
 
         <article class="col" id="cargo">
@@ -588,6 +619,12 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
             <div><dt>Trial</dt><dd>30 days free</dd></div>
             <div><dt>Web</dt><dd><a href="https://cargo.mwendavano.com" target="_blank" rel="noopener">cargo.mwendavano.com</a></dd></div>
           </dl>
+          <div class="stores">
+            <span class="lbl">Pakua programu · Get the app</span>
+            <a class="store" href="https://apps.apple.com/tz/app/mwendavano-cargo/id6827901463" target="_blank" rel="noopener"><img src="img/badges/app-store.svg" width="120" height="40" alt="Pakua Mwendavano Cargo kwenye App Store (Download on the App Store)"></a>
+            <!-- Google Play (coming soon). When live, make this a link: https://play.google.com/store/apps/details?id=com.mwendavano.cargo -->
+            <span class="store soon"><img src="img/badges/google-play.png" width="132" height="40" alt="Mwendavano Cargo kwenye Google Play: inakuja hivi karibuni (coming soon)"><small>Inakuja hivi karibuni · Coming soon</small></span>
+          </div>
         </article>
       </div>
     </div>
@@ -683,6 +720,13 @@ footer a { color: var(--ink); font-weight: 600; text-decoration: none; }
   <div class="wrap">
     <span class="copy"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--logo-bg)"/><path d="M8.5 23V10l7.5 7.5L23.5 10v13" fill="none" stroke="var(--logo-fg)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="9.5" r="3.2" fill="var(--accent)"/></svg>© 2026 Mwendavano Holdings Limited</span>
     <span>WhatsApp <a href="https://wa.me/255789947608" target="_blank" rel="noopener">+255 789 947 608</a> · <a href="mailto:support@mwendavano.com">support@mwendavano.com</a></span>
+    <nav class="apps" aria-label="Our apps on the App Store">
+      <span>Apps on iPhone:</span>
+      <a href="https://apps.apple.com/tz/app/dukani-mauzo/id6825214528" target="_blank" rel="noopener">Dukani Mauzo</a>
+      <a href="https://apps.apple.com/tz/app/dukani-sokoni/id6825765848" target="_blank" rel="noopener">Dukani Sokoni</a>
+      <a href="https://apps.apple.com/tz/app/mwendavano-cargo/id6827901463" target="_blank" rel="noopener">Mwendavano Cargo</a>
+      <span>Android: inakuja hivi karibuni · coming soon</span>
+    </nav>
   </div>
 </footer>
 
